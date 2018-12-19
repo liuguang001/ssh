@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="teacher" namespace="/teacher" extends="json-default">
+	
+		<action name="add" method="add" class="com.sshe.controller.TeacherAction">
+			<result type="json" name="success">
+				<!-- 指定是否序列化空的属性 -->
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">returnDto.*</param>
+			</result>
+		</action>
+		<action name="listAll" method="listAll" class="com.sshe.controller.TeacherAction">
+			<result type="json" name="success">
+				<!-- 指定是否序列化空的属性 -->
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">returnDto.*</param>
+			</result>
+		</action>
+		<action name="listByPage" method="listByPage" class="com.sshe.controller.TeacherAction">
+			<result type="json" name="success">
+				<!-- 指定是否序列化空的属性 -->
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">returnDto.*</param>
+			</result>
+		</action>
+	
+		<action name="resetState" method="resetState" class="com.sshe.controller.TeacherAction">
+			<result type="json" name="success">
+				<!-- 指定是否序列化空的属性 -->
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">returnDto.*</param>
+			</result>
+		</action>
+	
+		<action name="update" method="update" class="com.sshe.controller.TeacherAction">
+			<result type="json" name="success">
+				<!-- 指定是否序列化空的属性 -->
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">returnDto.*</param>
+			</result>
+		</action>
+		
+		<action name="remove" method="remove" class="com.sshe.controller.TeacherAction">
+			<result type="json" name="success">
+				<!-- 指定是否序列化空的属性 -->
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">returnDto.*</param>
+			</result>
+		</action>
+		
+		<action name="toAdd" class="com.sshe.controller.TeacherAction">
+			<result name="success">/WEB-INF/pages/teacher/teacher-add.html</result>
+		</action>
+		
+		<action name="toUpdate" class="com.sshe.controller.TeacherAction">
+			<result name="success">/WEB-INF/pages/teacher/teacher-update.html</result>
+		</action>
+		
+		<action name="toListPage" class="com.sshe.controller.TeacherAction">
+			<result name="success">/WEB-INF/pages/teacher/teacher-list.html</result>
+		</action>
+	</package>
+</struts>
